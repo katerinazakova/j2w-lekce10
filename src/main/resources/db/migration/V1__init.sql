@@ -1,13 +1,13 @@
 CREATE TABLE ucitel
 (
-    id       INTEGER IDENTITY PRIMARY KEY,
+    id       INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     jmeno    VARCHAR(100) NOT NULL,
     prijmeni VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE trida
 (
-    id               SMALLINT IDENTITY PRIMARY KEY,
+    id               INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nazev            VARCHAR(4) NOT NULL UNIQUE,
     tridni_ucitel_id INTEGER    NOT NULL UNIQUE,
     FOREIGN KEY (tridni_ucitel_id) REFERENCES ucitel (id)
@@ -15,7 +15,7 @@ CREATE TABLE trida
 
 CREATE TABLE student
 (
-    id       INTEGER IDENTITY PRIMARY KEY,
+    id       INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     jmeno    VARCHAR(100) NOT NULL,
     prijmeni VARCHAR(100) NOT NULL,
     trida_id SMALLINT     NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE student
 
 CREATE TABLE rodic
 (
-    id       INTEGER IDENTITY PRIMARY KEY,
+    id       INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     jmeno    VARCHAR(100) NOT NULL,
     prijmeni VARCHAR(100) NOT NULL,
     email    VARCHAR(100),

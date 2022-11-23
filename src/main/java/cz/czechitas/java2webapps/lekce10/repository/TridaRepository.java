@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 /**
  */
 @Repository
-public interface TridaRepository  extends JpaRepository<Trida, Short> {
+public interface TridaRepository  extends JpaRepository<Trida, Integer> {
 }

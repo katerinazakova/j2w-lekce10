@@ -17,4 +17,4 @@
 
 ## Odkazy
 
-* [Lekce 10](https://java.czechitas.cz/2021-jaro/java-2/lekce-10.html)
+* [Lekce 10](https://java.czechitas.cz/2022-podzim/java-2-online/lekce-10.html)
