@@ -13,7 +13,6 @@
 1. Na všech stránkách (mimo úvodního seznamu tříd) bude odkaz „zpět na seznam tříd“, který povede na úvodní stránku.
 1. Zkontroluj, zda vše funguje.
 1. *Commitni* a *pushnni* změny (výsledný kód) do svého repository na GitHubu.
-1. Vlož odkaz na své repository do tabulky s úkoly na Google Drive.
 
 ## Odkazy
 
