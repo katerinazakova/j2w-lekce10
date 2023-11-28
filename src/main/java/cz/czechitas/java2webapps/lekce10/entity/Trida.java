@@ -1,6 +1,7 @@
 package cz.czechitas.java2webapps.lekce10.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,7 +21,7 @@ public class Trida {
 
   private String nazev;
 
-  @OneToOne(optional = false)
+  @OneToOne(optional = false, fetch = FetchType.EAGER)
   @JoinColumn(name = "tridni_ucitel_id")
   private Ucitel tridniUcitel;
 
