@@ -17,7 +17,7 @@ public class TridaController {
     this.tridaService = tridaService;
   }
 
-  @GetMapping("/")
+  @GetMapping("")
   public ModelAndView index() {
     ModelAndView modelAndView = new ModelAndView("/trida/index");
     modelAndView.addObject("tridy", tridaService.findAll());

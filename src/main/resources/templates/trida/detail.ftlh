@@ -2,6 +2,7 @@
 
 [@c.page title="Třída ${trida.nazev}"]
     <h1>Třída ${trida.nazev}</h1>
+    <p>třídní učitel: ${trida.tridniUcitel.celeJmeno}</p>
     <table class="table">
         <thead>
         <tr>
