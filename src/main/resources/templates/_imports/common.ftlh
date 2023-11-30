@@ -19,3 +19,8 @@
     </body>
     </html>
 [/#macro]
+
+[#macro back]
+<p class="back"><a href="/">Zpět na seznam tříd</a></p>
+
+[/#macro]

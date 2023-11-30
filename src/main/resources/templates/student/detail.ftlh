@@ -2,7 +2,8 @@
 
 [@c.page title="Student ${student.jmeno} ${student.prijmeni}"]
     <h1>Student ${student.jmeno} ${student.prijmeni}</h1>
-    <p>třída: ${student.trida}</p>
+
+    <td><a href="/trida/${student.trida.id}"><p>třída: ${student.trida}</p></a></td>
     <table class="table">
         <thead>
         <tr>
@@ -21,10 +22,10 @@
                 <td>${rodic.prijmeni}</td>
                 <td>${rodic.telefon}</td>
                 <td>${rodic.email}</td>
-
-                <td><a href="/student/${student.id}">Detail</a></td>
             </tr>
         [/#list]
         </tbody>
     </table>
+    [@c.back/]
+
 [/@c.page]

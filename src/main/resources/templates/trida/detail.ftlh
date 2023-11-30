@@ -21,4 +21,5 @@
         [/#list]
         </tbody>
     </table>
+    [@c.back /]
 [/@c.page]
