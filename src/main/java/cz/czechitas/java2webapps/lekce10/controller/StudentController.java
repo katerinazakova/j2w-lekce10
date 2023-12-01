@@ -10,18 +10,26 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/student")
 public class StudentController {
-  private final StudentService studentService;
+    private final StudentService studentService;
 
-  public StudentController(StudentService studentService) {
-    this.studentService = studentService;
-  }
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
 
-  @GetMapping("/{id}")
-  public ModelAndView detail(@PathVariable int id) {
-    ModelAndView modelAndView = new ModelAndView("/student/detail");
-    modelAndView.addObject("student", studentService.findById(id));
-    modelAndView.addObject("rodice", studentService.getParents(id));
-    return modelAndView;
-  }
+    @GetMapping("")
+    public ModelAndView index() {
+        ModelAndView modelAndView = new ModelAndView("/student/index");
+        modelAndView.addObject("studenti", studentService.findAll());
+        return modelAndView;
+    }
+
+    @GetMapping("/{id}")
+    public ModelAndView detail(@PathVariable int id) {
+        ModelAndView modelAndView = new ModelAndView("/student/detail");
+        modelAndView.addObject("student", studentService.findById(id));
+        modelAndView.addObject("rodice", studentService.getParents(id));
+        return modelAndView;
+    }
+
 
 }

@@ -10,18 +10,21 @@ import java.util.List;
 
 @Service
 public class StudentService {
-  private final StudentRepository studentRepository;
+    private final StudentRepository studentRepository;
 
-  public StudentService(StudentRepository studentRepository) {
-    this.studentRepository = studentRepository;
-  }
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
+    public List<Student> findAll() {
+        return studentRepository.findAll();
+    }
 
-  public Student findById(int id) {
-    return studentRepository.findById(id).get();
-  }
+    public Student findById(int id) {
+        return studentRepository.findById(id).get();
+    }
 
-  public List<Rodic> getParents(int id) {
-    return studentRepository.findById(id).get().getRodice();
-  }
+    public List<Rodic> getParents(int id) {
+        return studentRepository.findById(id).get().getRodice();
+    }
 }

@@ -9,21 +9,21 @@ import java.util.List;
 
 @Service
 public class TridaService {
-  private final TridaRepository tridaRepository;
+    private final TridaRepository tridaRepository;
 
-  public TridaService(TridaRepository tridaRepository) {
-    this.tridaRepository = tridaRepository;
-  }
+    public TridaService(TridaRepository tridaRepository) {
+        this.tridaRepository = tridaRepository;
+    }
 
-  public List<Trida> findAll() {
-    return tridaRepository.findAll();
-  }
+    public List<Trida> findAll() {
+        return tridaRepository.findAll();
+    }
 
-  public Trida findById(int id) {
-    return tridaRepository.findById(id).get();
-  }
+    public Trida findById(int id) {
+        return tridaRepository.findById(id).get();
+    }
 
-  public List<Student> getStudents(int id) {
-    return tridaRepository.findById(id).get().getStudenti();
-  }
+    public List<Student> getStudents(int id) {
+        return tridaRepository.findById(id).get().getStudenti();
+    }
 }

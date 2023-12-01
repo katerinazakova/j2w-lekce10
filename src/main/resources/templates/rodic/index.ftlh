@@ -1,9 +1,7 @@
 [#ftl]
 
-[@c.page title="Student ${student.jmeno} ${student.prijmeni}"]
-    <h1>Student ${student.jmeno} ${student.prijmeni}</h1>
-
-    <td><a href="/trida/${student.trida.id}"><p>třída: ${student.trida}</p></a></td>
+[@c.page title="Seznam rodičů"]
+    <h1>Seznam rodičů</h1>
     <table class="table">
         <thead>
         <tr>
@@ -11,7 +9,6 @@
             <th scope="col">Příjmení</th>
             <th scope="col">E-mail</th>
             <th scope="col">Telefon</th>
-
             <th scope="col"></th>
         </tr>
         </thead>
@@ -22,10 +19,10 @@
                 <td>${rodic.prijmeni}</td>
                 <td>${rodic.email}</td>
                 <td>${rodic.telefon}</td>
+                <td><a href="/rodic/${rodic.id}">Detail</a></td>
             </tr>
         [/#list]
         </tbody>
     </table>
-    [@c.back/]
-
+    [@c.back /]
 [/@c.page]
