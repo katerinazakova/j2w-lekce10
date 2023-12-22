@@ -15,7 +15,6 @@ public class UcitelController {
     this.ucitelService = ucitelService;
   }
 
-
   @GetMapping("")
   public ModelAndView index(){
     ModelAndView modelAndView = new ModelAndView("ucitel/index");

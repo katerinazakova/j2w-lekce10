@@ -14,11 +14,12 @@
         </tr>
         </thead>
         <tbody>
-        [#list deti as díte]
+        [#list deti as dite]
             <tr>
-                <td>${díte.jmeno}</td>
-                <td>${díte.prijmeni}</td>
-                <td>${díte.trida}</td>
+                <td>${dite.jmeno}</td>
+                <td>${dite.prijmeni}</td>
+                <td>${dite.trida}</td>
+                <td><a href="/trida/${dite.trida.id}">Detail</a></td>
             </tr>
         [/#list]
         </tbody>
